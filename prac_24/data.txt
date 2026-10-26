@@ -1,0 +1,3 @@
+This is streaming data from the Node.js server.
+The data is being transferred from the server to the client.
+Node.js streams data efficiently without loading the complete file into memory.

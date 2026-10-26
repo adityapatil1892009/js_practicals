@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>practical no.16</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text-div">
+        <h3>Browser & Screen Properties</h3>
+        <div id="bomInfo"></div>
+        <p id="urlDisplay"></p>
+        <button class="buttons" onclick="redirectToGovt()">Visit GP Pune Portal</button>
+    </div>
+    <script>
+        let info = "";
+        info +=
+            "<strong>Screen Width:</strong> " + window.screen.width + " px<br>";
+        info +=
+            "<strong>Screen Height:</strong> " + window.screen.height + " px<br>";
+        info +=
+            "<strong>Browser Online Status:</strong> " + navigator.onLine + "<br>";
+        info += "<strong>User Agent:</strong> " + navigator.userAgent;
+        document.getElementById("bomInfo").innerHTML = info;
+        document.getElementById("urlDisplay").innerHTML =
+            "<strong>Current Page Host:</strong> " + window.location.hostname + "<br>" +
+            "<strong>Current Protocol:</strong> " + window.location.protocol;
+        function redirectToGovt() {
+            // Safely redirects current tab to institute homepage
+            window.location.href = "https://www.gppune.ac.in";
+        }
+    </script>
+</body>
+
+</html>

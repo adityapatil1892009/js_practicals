@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Practical 10</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+</head>
+
+<body>
+    <div class="text-div">
+        <p class="text">String - </p>
+        <div id="div" class="tab"></div>    
+        <p class="text">Length - </p>
+        <div id="div1" class="tab"></div>
+        <p class="text">Lower case - </p>
+        <div id="div2" class="tab"></div>
+        <p class="text">Upper case - </p>
+        <div id="div3" class="tab"></div>
+        <p class="text">Sub string - </p>
+        <div id="div4" class="tab"></div>
+    </div>
+</body>
+<script>
+    let i = "Government Polytechnic Pune";
+    document.getElementById("div").innerHTML = i;
+    document.getElementById("div1").innerHTML = i.length;
+    document.getElementById("div2").innerHTML = i.toLowerCase();
+    document.getElementById("div3").innerHTML = i.toUpperCase();
+    document.getElementById("div4").innerHTML = i.substr(0,10);
+</script>
+</html>

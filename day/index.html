@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Practical 5</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+</head>
+
+<body>
+    <div class="text-div">
+        <h2>1] Today's Info </h2>
+        <br>
+        <p class="text"></p>
+        <br>
+        <p class="text"></p>
+        <br>
+        <p class="text"></p>
+        <br>
+        <p class="text"></p>
+        <br>
+        <p class="text"></p>
+    </div>
+</body>
+<script>
+    let date,day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    date = prompt("Enter the Date - ","2026-08-19");
+    date = new Date(date);
+    day_name = day[date.getDay()];
+    document.getElementsByClassName("text")[0].innerHTML = "<span class='text-1'>Day : </span>" + day_name;
+</script>
+</html>

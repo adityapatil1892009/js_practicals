@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Root Element containing collection of students -->
+<polytechnic>
+    <student id="CM-301">
+        <name>Saurabh Jadhav</name>
+        <branch>Computer Engineering</branch>
+        <semester>Third</semester>
+        <cgpa>8.75</cgpa>
+    </student>
+    <student id="CM-302">
+        <name>Priya Shinde</name>
+        <branch>Computer Engineering</branch>
+        <semester>Third</semester>
+        <cgpa>9.20</cgpa>
+    </student>
+</polytechnic>

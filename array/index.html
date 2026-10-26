@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Practical 10</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+</head>
+
+<body>
+    <div class="text-div">
+        <p class="text">Main Array - </p>
+        <div id="div" class="tab"></div>    
+        <p class="text">Sorted - </p>
+        <div id="div1" class="tab"></div>
+        <p class="text">Pop Operation - </p>
+        <div id="div2" class="tab"></div>
+        <p class="text">Push Operation - </p>
+        <div id="div3" class="tab"></div>
+    </div>
+</body>
+<script>
+    let i = [1,9,0,4,3,7,8];
+    document.getElementById("div").innerHTML = i;
+    document.getElementById("div1").innerHTML = i.sort((a, b) => a - b);
+    i.pop();
+    document.getElementById("div2").innerHTML = i;
+    i.push(12);
+    document.getElementById("div3").innerHTML = i;
+</script>
+</html>

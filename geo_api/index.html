@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>practical no.17</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text-div">
+        <h3>HTML5 Geolocation API Demo</h3>
+        <button class="buttons" onclick="getLocation()">Get My Coordinates</button>
+        <p id="geoOut"></p>
+    </div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (pos) {
+                    console.log(pos);
+                    document.getElementById("geoOut").innerHTML =
+                        "Latitude: <strong>" + pos.coords.latitude.toFixed(4) + "°</strong><br>" +
+                        "Longitude: <strong>" + pos.coords.longitude.toFixed(4) + "°</strong>";
+                });
+            } else {
+                document.getElementById("geoOut").innerHTML = "Geolocation not supported.";
+            }}
+    </script>
+</body>
+
+</html>

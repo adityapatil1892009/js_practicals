@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>practical no.18</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text-div">
+        <h3>Modern AJAX Fetch API</h3> <button class="buttons" onclick="fetchUserData()">Load User Details</button>
+        <p id="userCard"></p>
+    </div>
+        <script>    function fetchUserData() { fetch("https://jsonplaceholder.typicode.com/users/1").then(response => response.json()).then(user => { document.getElementById("userCard").innerHTML = "<strong>Name:</strong> " + user.name + "<br>" + "<strong>Email:</strong> " + user.email + "<br>" + "<strong>City:</strong> " + user.address.city; }).catch(err => console.error("AJAX Fetch failed: ", err)); }  </script>
+
+</body>
+
+</html>

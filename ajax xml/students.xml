@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>Aditya</name>
+        <course>Computer Engineering</course>
+    </student>
+    <student>
+        <name>Rahul</name>
+        <course>Information Technology</course>
+    </student>
+    <student>
+        <name>Vaibhav</name>
+        <course>Computer Engineering</course>
+    </student>
+</students>

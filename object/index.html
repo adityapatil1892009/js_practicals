@@ -1,0 +1,58 @@
+
+<html>
+
+<head>
+    <title>Practical 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="text-div">
+
+        <p class="text">Welcome To Kitchen King</p>
+        <br>
+        <button onclick="k.placeorder()" class="inputs">Place Order</button>
+
+        <div id="order"></div>
+
+    </div>
+
+    <script>
+
+        class Kitchen {
+
+            placeorder() {
+
+                document.getElementById("order").innerHTML = `
+                    <input class="inputs" type="text" id="food"
+                    placeholder="Enter your order">
+
+                    <button class='buttons' onclick="k.confirmorder()">Confirm Order</button>
+                `;
+            }
+
+            confirmorder() {
+
+                let food = document.getElementById("food").value;
+
+                if (food == "") {
+                    document.getElementById("order").innerHTML =
+                        "Please enter your order.";
+                }
+                else {
+                    document.getElementById("order").innerHTML =
+                        "Your order for <b>" + food +
+                        "</b> has been placed successfully!";
+                }
+            }
+        }
+
+        let k = new Kitchen();
+
+    </script>
+
+</body>
+
+</html>
+

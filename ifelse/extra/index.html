@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+	let today = new Date()
+	let today_year = today.getFullYear()
+        let birthdate = window.prompt("Enter your Birthdate -","YYYY-MM-DD")
+	let date = new Date(birthdate)
+	let birth_year = date.getFullYear()	
+	let age = today_year - birth_year
+	
+
+	if (birth_year < 1800){
+		console.log("Invalid Year")
+	}
+	else if(birth_year > 2026){
+		console.log("Invalid Year")
+	}
+
+	else{
+	if(age >= 18)
+		console.log("You are Adult")
+	else
+		console.log("You are minor")
+	}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<html>
+  <body>
+    <div class="text-div">
+    <h3>XML DOM In-Memory Parser</h3>
+    <p id="domOutput"></p>
+    </div>
+    <script>
+      let xmlString =
+        "<college name='GP Pune'><department>Computer Engg</department><intake>120</intake></ college>";
+
+      let parser = new DOMParser();
+      let xmlDoc = parser.parseFromString(xmlString, "text/xml");
+      let collegeName = xmlDoc
+        .getElementsByTagName("college")[0]
+        .getAttribute("name");
+      let dept =
+        xmlDoc.getElementsByTagName("department")[0].childNodes[0].nodeValue;
+      let intake = xmlDoc.getElementsByTagName("intake")[0].textContent;
+      document.getElementById("domOutput").innerHTML =
+        "<strong>Institution:</strong> " +
+        collegeName +
+        "<br>" +
+        "<strong>Department:</strong> " +
+        dept +
+        "<br>" +
+        "<strong>Approved Intake:</strong> " +
+        intake +
+        " Students";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Practical 3</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+</head>
+
+<body>
+    <div class="text-div">
+        <p class="text"></p>
+        <br>
+        <p class="text"></p>
+        <br>
+        <p class="text"></p>
+    </div>
+    <script>
+        const date = new Date(document.lastModified);
+        let myDomain = document.domain;
+        let myUrl = document.URL;
+        document.getElementsByClassName("text")[0].innerHTML = "<span class='text-1'>Last Modified :   </span>" + date;
+        document.getElementsByClassName("text")[1].innerHTML = "<span class='text-1'>Domain :   </span>" + myDomain;
+        document.getElementsByClassName("text")[2].innerHTML = "<span class='text-1'>URL :   </span>" + myUrl;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+
+<html>
+<head>
+    <title>XML Web Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="text-div">
+<h2>XML Web Service Example</h2>
+
+<button class="buttons" onclick="getStudents()">Get Student Data</button>
+
+<div id="output"></div>
+</div>
+<script>
+function getStudents() {
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "students.xml", true);
+
+    xhr.onload = function() {
+
+        if (xhr.status == 200) {
+
+            let xmlDoc = xhr.responseXML;
+
+            let students =
+                xmlDoc.getElementsByTagName("student");
+
+            let output = "";
+
+            for (let i = 0; i < students.length; i++) {
+
+                let id =
+                    students[i].getElementsByTagName("id")[0]
+                    .textContent;
+
+                let name =
+                    students[i].getElementsByTagName("name")[0]
+                    .textContent;
+
+                let course =
+                    students[i].getElementsByTagName("course")[0]
+                    .textContent;
+
+                output +=
+                    "<p>" +
+                    "<b>ID:</b> " + id + "<br>" +
+                    "<b>Name:</b> " + name + "<br>" +
+                    "<b>Course:</b> " + course +
+                    "</p>";
+            }
+
+            document.getElementById("output").innerHTML = output;
+        }
+    };
+
+    xhr.send();
+}
+</script>
+
+</body>
+</html>
